@@ -38,7 +38,7 @@ app.get('/api/servicios/:id', (req, res) => {
 app.post('/api/servicios', (req, res) => {
   const { nombre, precio, estado } = req.body;
 
-  // Validación de campos obligatorios
+  // Validacion de campos obligatorios
   if (!nombre || !precio) {
     return res.status(400).json({
       ok: false,
@@ -91,7 +91,7 @@ app.delete('/api/servicios/:id', (req, res) => {
   res.status(200).json({ ok: true, mensaje: 'Servicio eliminado exitosamente' });
 });
 
-// Ruta raíz
+// Ruta raiz
 app.get('/', (req, res) => {
   res.send('API REST de Servicios Web - Proyecto SENA GA7-EV03');
 });
